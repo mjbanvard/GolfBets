@@ -1,0 +1,42 @@
+.HoleNumber {
+  border: 1px solid #eee;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.HoleName {
+  border: 1px solid #eee;
+  width: 70px;
+  height: 30px;
+  text-align: left;
+  font-weight: bolder;
+}
+
+.HoleScore {
+  border: 1px solid #eee;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.TotalTitle {
+  border: 1px solid #eee;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.TotalScore {
+  border: 1px solid #eee;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+}
+
+.rowC {
+  display: flex;
+  flex-direction: row;
+}
