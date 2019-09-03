@@ -63,14 +63,29 @@ const totalScore = score => {
   return <div className='TotalScore'>{scorefill}</div>
 }
 
+const playerRow = players => {
+  let evening = []
+  for (let j = 0; j < players.length; j++) {
+    console.log('Players ', players[j].holeScores)
+    evening.push(< div className='rowC' >
+      <div className='HoleName'>{players[j].name}</div>
+      {score(players[j].holeScores, 'front')}
+      {sideTotal(players[j].holeScores, 'front')}
+      {score(players[j].holeScores, '')}
+      {sideTotal(players[j].holeScores, '')}
+      {totalScore(players[j].holeScores)}
+    </div >)
+  }
+  return evening
+}
+
 const scoreCard = props => {
-  console.log('Dem B props', props)
+  console.log('Dem B props', props.scores)
   let holeBadge = <div className='HoleName'>Hole</div>
   let total = <div className='TotalTitle'>Total</div>
   let front = <div className='TotalTitle'>Front</div>
   let back = <div className='TotalTitle'>Back</div>
-  let nameBadge = <div className='HoleName'>{props.scores.name}</div>
-  let playerScore = props.scores.holeScores
+  let playerScore = props.scores[0].holeScores
 
   return (
     <div>
@@ -82,14 +97,7 @@ const scoreCard = props => {
         {back}
         {total}
       </div>
-      <div className='rowC'>
-        {nameBadge}
-        {score(playerScore, 'front')}
-        {sideTotal(playerScore, 'front')}
-        {score(playerScore, '')}
-        {sideTotal(playerScore, '')}
-        {totalScore(playerScore)}
-      </div>
+      {playerRow(props.scores)}
     </div>
   )
 }
