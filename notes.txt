@@ -1,0 +1,19 @@
+Creating database on docker container on raspberry pi.  Here is the yml file to run.
+
+File is called docker-compose.yml
+
+version: '3'
+
+services:
+
+  mysql-developmet:
+    image: hypriot/rpi-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: *password*
+      MYSQL_DATABASE: golfscore
+    ports:
+      - "3308:3306"
+      
+      
+From directory where this file is located run docker-compose up
+
