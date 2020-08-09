@@ -1,6 +1,10 @@
 import React from 'react'
 import './scorecard.css'
 
+handleChange(event) {
+  this.setState({ value: event.target.value })
+}
+
 const holeNumber = (holes, side) => {
   let start = 9
   let end = 18
@@ -30,7 +34,11 @@ const score = (score, side) => {
   for (let f = start; f < end; f++) {
     comb.push(
       < div className='HoleScore' >
-        <p>{score[f].score}</p>
+        {/* <p>{score[f].score}</p> */}
+        <form>
+          <input type="number" value={score[f].score} onChange={this.handleChange} />
+        </form>
+
       </div >
     )
   }

@@ -1,0 +1,6 @@
+1. Use a Raspberry Pi to create a Docker container that spins up a SQL database and seeds it with some data
+2. Connect app to the database and have it build the scorecard
+3. Enable hole scores to be edited and saved back to database
+
+Currently working on being able to change the scores in the scorecard.  
+Will likely need to make a new class.
