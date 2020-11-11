@@ -19,6 +19,7 @@
   width: 30px;
   height: 30px;
   text-align: center;
+  font-weight: bolder; /* MJB */
 }
 
 .TotalTitle {
@@ -30,10 +31,11 @@
 }
 
 .TotalScore {
-  border: 1px solid #eee;
+  border: 1px solid rgb(236, 42, 42); /* MJB */
   width: 50px;
   height: 30px;
   text-align: center;
+  font-weight: bolder; /* MJB */
 }
 
 .rowC {
