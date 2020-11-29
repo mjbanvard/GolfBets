@@ -35,7 +35,7 @@ const score = (score, side) => {
     comb.push(
       <div className='HoleScore'>
         <form>
-          <input type='number' value={score[f].score} onChange={handleChange} />
+          <input className='inputCell' type='number' value={score[f].score} onChange={handleChange} />
         </form>
       </div>
     )
