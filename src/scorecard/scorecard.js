@@ -2,6 +2,8 @@ import React from 'react'
 import './scorecard.css'
 
 const handleChange = (event) => {
+  // Trying to find where handleChange manifests
+  console.log("Aren't we supposed to see this?")
   console.log('Status: ', this.props)
 }
 
@@ -35,7 +37,8 @@ const score = (score, side) => {
     comb.push(
       <div className='HoleScore'>
         <form>
-          <input type='number' value={score[f].score} onChange={handleChange} />
+          {/* MJB added className and .css details to match cell width */}
+          <input className='inputCell' type='number' value={null} onChange={handleChange} />
         </form>
       </div>
     )
