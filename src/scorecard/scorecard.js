@@ -41,7 +41,7 @@ const score = (score, side) => {
           {/* <td>
             <textarea name="Answer" placeholder="Answer" th:field="${questionAnswerSet.answer}" id="answer" style="resize: none; width: 100%;"></textarea>
           </td> */}
-          <input className='inputCell' type='number' value={null} onChange={handleChange} />
+          <input className='inputCell' type='input' value={null} onChange={handleChange} />
         </form>
       </div>
     )

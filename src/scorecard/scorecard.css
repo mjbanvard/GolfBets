@@ -44,7 +44,9 @@
 }
 
 .inputCell {
+  
   width: 30px;
+  justify-content: center;
 }
 
 .dropbtn {
@@ -57,7 +59,7 @@
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  background-color: #325770;
 }
 
 .dropdown {
