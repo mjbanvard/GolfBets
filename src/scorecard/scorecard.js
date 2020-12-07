@@ -4,7 +4,7 @@ import './scorecard.css'
 const handleChange = (event) => {
   // Trying to find where handleChange manifests
   console.log("Aren't we supposed to see this?")
-  console.log('Status: ', this.props)
+  // console.log('Status: ', this.props)
 }
 
 const holeNumber = (holes, side) => {
@@ -38,6 +38,9 @@ const score = (score, side) => {
       <div className='HoleScore'>
         <form>
           {/* MJB added className and .css details to match cell width */}
+          {/* <td>
+            <textarea name="Answer" placeholder="Answer" th:field="${questionAnswerSet.answer}" id="answer" style="resize: none; width: 100%;"></textarea>
+          </td> */}
           <input className='inputCell' type='number' value={null} onChange={handleChange} />
         </form>
       </div>
