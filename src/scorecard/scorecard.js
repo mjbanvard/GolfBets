@@ -2,9 +2,16 @@ import React from 'react'
 import './scorecard.css'
 
 const handleChange = (event) => {
+  let keyStroke = parseInt(event.key)
   // Trying to find where handleChange manifests
-  console.log("Aren't we supposed to see this?")
+  // console.log("Aren't we supposed to see this?")
   // console.log('Status: ', this.props)
+  console.log(keyStroke)
+  if (event.key >= '0' && event.key <= '9') {
+    // inScore[f].score = event.key
+    console.log('Show me ', keyStroke)
+    return keyStroke
+  }
 }
 
 const holeNumber = (holes, side) => {
@@ -25,10 +32,11 @@ const holeNumber = (holes, side) => {
   return comb
 }
 
-const score = (score, side) => {
+const score = (inScore, side) => {
   let start = 9
   let end = 18
   let comb = []
+  // let keyStroke
   if (side === 'front') {
     start = 0
     end = 9
@@ -39,12 +47,18 @@ const score = (score, side) => {
         <form>
           {/* MJB added className and .css details to match cell width */}
           {/* <td>
-            <textarea name="Answer" placeholder="Answer" th:field="${questionAnswerSet.answer}" id="answer" style="resize: none; width: 100%;"></textarea>
+            <textarea name="Answer" placeholder="Answer" 
+            th:field="${questionAnswerSet.answer}" id="answer" 
+            style="resize: none; width: 100%;">
+            </textarea>
           </td> */}
-          <input className='inputCell' type='input' value={null} onChange={handleChange} />
+          <input className='inputCell' type='input' 
+            value={inScore[f].score} onKeyUp={handleChange} />
+          inScore[f].score.bind(keyStroke)
         </form>
       </div>
     )
+    
   }
   return comb
 }
@@ -62,14 +76,14 @@ const sideTotal = (total, side) => {
     scorefill = scorefill + total[x].score
   }
   comb.push(<div className='TotalScore'>{scorefill}</div>)
-
+  console.log('This is COMB: ', comb)
   return comb
 }
 
-const totalScore = (score) => {
+const totalScore = (propScore) => {
   let scorefill = 0
-  for (let x = 0; x < score.length; x++) {
-    scorefill = scorefill + score[x].score
+  for (let x = 0; x < propScore.length; x++) {
+    scorefill = scorefill + propScore[x].score
   }
   return <div className='TotalScore'>{scorefill}</div>
 }
