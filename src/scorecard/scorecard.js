@@ -6,7 +6,7 @@ const handleChange = (event) => {
   // Trying to find where handleChange manifests
   // console.log("Aren't we supposed to see this?")
   // console.log('Status: ', this.props)
-  console.log(keyStroke)
+  console.log(event.key)
   if (event.key >= '0' && event.key <= '9') {
     // inScore[f].score = event.key
     console.log('Show me ', keyStroke)
@@ -53,13 +53,19 @@ const score = (inScore, side) => {
             </textarea>
           </td> */}
           <input className='inputCell' type='input' 
-            value={inScore[f].score} onKeyUp={handleChange} />
-          inScore[f].score.bind(keyStroke)
+            defaultValue={inScore[f].score} onKeyUp={handleChange
+            /*console.log('OnKeyUp ', onKeyUp)
+            inScore[f].score.bind(onKeyUp)*/} />
+          {/* <script>
+            console.log('OnKeyUp ', onKeyUp);
+             inScore[f].score.bind(onKeyUp);
+          </script>  */}
         </form>
       </div>
     )
     
   }
+  console.log('This is comb: ', comb)
   return comb
 }
 
