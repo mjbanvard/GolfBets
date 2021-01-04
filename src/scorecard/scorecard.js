@@ -36,7 +36,8 @@ var handleChange = (event) => {
   console.log(event.key)
   if (event.key >= '0' && event.key <= '9') {
     // inScore[f].score = event.key
-    // 'this.' added to keystroke, below, to eliminate IntelliSense error
+
+    // 'this.' added to 'keystroke, below, to eliminate IntelliSense error
     console.log('Show me ', this.keyStroke)
     return this.keyStroke
   }
