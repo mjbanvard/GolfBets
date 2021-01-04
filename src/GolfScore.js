@@ -6,7 +6,11 @@ import './bootstrap.min.css'
 class GolfScore extends Component {
   state = [
     {
+<<<<<<< HEAD
       key: 0,
+=======
+      key: 1,
+>>>>>>> 6cc708ad448035eb87651eb155cb4c2dbdf49853
       name: 'Chris',
       holeScores: [
         { hole: 1, score: 4 },
@@ -30,7 +34,11 @@ class GolfScore extends Component {
       ],
     },
     {
+<<<<<<< HEAD
       key: 1,
+=======
+      key: 2,
+>>>>>>> 6cc708ad448035eb87651eb155cb4c2dbdf49853
       name: 'Harry',
       holeScores: [
         { hole: 1, score: 3 },
@@ -54,7 +62,11 @@ class GolfScore extends Component {
       ],
     },
     {
+<<<<<<< HEAD
       key: 2,
+=======
+      key: 3,
+>>>>>>> 6cc708ad448035eb87651eb155cb4c2dbdf49853
       name: 'Ron',
       holeScores: [
         { hole: 1, score: 4 },
