@@ -1,8 +1,36 @@
 import React from 'react'
 import './scorecard.css'
 
-const handleChange = (event) => {
+//   This is a StackOverflow solution that uses .bind and setState. -MJB
+//   class Example extends React.Component {
+//   
+//   constructor() {
+//     super();
+//     this.state = { gender: "male" };
+//     this.handleChange = this.handleChange.bind(this);
+//   }
+//
+//   handleChange(e) {
+//     this.setState({ gender: e.target.value });
+//   }
+//
+//   render() {
+//     return (
+//       <select value={this.state.gender} onChange={this.handleChange}>
+//         <option name="male"> Male</option>
+//         <option name="female">Female</option>
+//       </select>
+//     );
+//   }
+// }
+//
+// ReactDOM.render(<Example />, document.getElementById("root"));
+
+var handleChange = (event) => {
   // Trying to find where handleChange manifests
+  // console.log(event.current.value)
+  this.setState({ score: event.current.value })
+  // handleChange = handleChange.bind(this)
   console.log("Aren't we supposed to see this?")
   // console.log('Status: ', this.props)
 }
@@ -41,7 +69,7 @@ const score = (score, side) => {
           {/* <td>
             <textarea name="Answer" placeholder="Answer" th:field="${questionAnswerSet.answer}" id="answer" style="resize: none; width: 100%;"></textarea>
           </td> */}
-          <input className='inputCell' type='input' value={null} onChange={handleChange} />
+          <input className='inputCell' type='input' value={score[f].score} onChange={handleChange()} />
         </form>
       </div>
     )

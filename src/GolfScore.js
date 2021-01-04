@@ -6,6 +6,7 @@ import './bootstrap.min.css'
 class GolfScore extends Component {
   state = [
     {
+      key: 0,
       name: 'Chris',
       holeScores: [
         { hole: 1, score: 4 },
@@ -29,6 +30,7 @@ class GolfScore extends Component {
       ],
     },
     {
+      key: 1,
       name: 'Harry',
       holeScores: [
         { hole: 1, score: 3 },
@@ -52,6 +54,7 @@ class GolfScore extends Component {
       ],
     },
     {
+      key: 2,
       name: 'Ron',
       holeScores: [
         { hole: 1, score: 4 },
